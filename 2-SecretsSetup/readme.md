@@ -22,16 +22,15 @@ Now we need to configure the DockerHub username. This allows us to avoid Docker 
 
 ![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/2-SecretsSetup/5-secrets.png)
 
-Next, retrieve the ARN values for the Dockerhub key and store temporarily.
+Next, retrieve the ARN values for the DockerHub key and store temporarily.
 
 ![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/2-SecretsSetup/6-secrets.png)
 
 ## Secrets Manager Permissions
 
-NOTE: After each CodeBuild project is created, you must follow this process to give your CodeBuild project access to the Secrets. 
+NOTE: After each CodeBuild project is created, you must follow this process to give your CodeBuild project access to the Secrets:
 
-You will need to complete this step after each CodeBuild that you create which requires these credentials.
-
+https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/tree/main/2.1-SecretsPermissions
 
 ## Now we are ready to create a build project using Veracode services.
 

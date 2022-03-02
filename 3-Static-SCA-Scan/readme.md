@@ -65,4 +65,4 @@ If you want to break the build when it does not pass Policy add -scantimeout 30
 
 ![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/3-Static-SCA-Scan/4-StaticSCA.png)
 
-In addition to breaking the CodeBuild step if there are new issues or  downloading the repot, you can also login to the Veracode platform to view results.
+In addition to breaking the CodeBuild step if there are new issues or downloading the repot, you can also login to the Veracode platform to view results.

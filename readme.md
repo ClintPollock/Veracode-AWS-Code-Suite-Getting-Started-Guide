@@ -18,7 +18,7 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * Cloud9 IDE (very fun and powerful IDE)
 * CodeCommit - this is where we’ll place the PetStoreAPI code.
 * CodeBuild - this is the primary area we integrate Veracode commands. 
-* CodePipeline - pull in the CodeBuild steps to the appropiate point in your CodePipeline.
+* CodePipeline - pull in the CodeBuild steps to the appropriate point in your CodePipeline.
 
 ### General Flow
 * Create CodeCommit Repository 
@@ -33,14 +33,14 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * Add a pass / fail check
 * Create VC SAST Pipeline build project 
 * Use a baseline file
-* Create VC SCA Agent build project for the app itselft
+* Create VC SCA Agent build project for the app itself
 * Create VC SCA Agent build project for Docker Image
 * Setup and run a DAST scan
 
 
 ## Step 1 Initial Setup
 
-We'll need an AWS account and a Veracode subscription.  Costs are low for running Cloud9, CodeBuild, and CodePipeline projects and will be in the free tier for this excerise. 
+We'll need an AWS account and a Veracode subscription.  Costs are low for running Cloud9, CodeBuild, and CodePipeline projects and will be in the free tier for this excercise. 
 
 https://console.aws.amazon.com/
 
@@ -62,7 +62,7 @@ To make Cloud9 Terminal easier to use, you can go to Preferences - User Settings
 
 ![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/InitialSetup/3-AWSCloud9.png)
 
-Now use the termal to run this command to create your S3 bucket.  Be sure to customize the bucket name.
+Now use the terminal to run this command to create your S3 bucket.  Be sure to customize the bucket name.
 
 ```bash
 aws s3 mb s3://petstoreapi(InsertRandonNumberLetter)
@@ -70,7 +70,7 @@ aws s3 mb s3://petstoreapi(InsertRandonNumberLetter)
 
 To clone the PetstoreAPI into AWS we need to run a few commands.
 
-Grab the Clone URL from your CodeCommit repo , such as https://git-codecommit.us-east-1.amazonaws.com/v1/repos/PetStoreAPI2
+Grab the Clone URL from your CodeCommit repo, such as https://git-codecommit.us-east-1.amazonaws.com/v1/repos/PetStoreAPI2
 
 Now we need to configure git within your Cloud9 IDE and integrate it with your CodeCommit repository.
 
@@ -169,4 +169,6 @@ Here you can see the artifact in your S3 bucket.
 
 ![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/InitialSetup/24-AWSCodeBuild.png)
 
-Move onto the next step, setting up the VID, VKEY, and SRCCLR_API_TOKEN in the AWS Secrets Manager
+Move onto the next step, setting up the VID, VKEY, and SRCCLR_API_TOKEN in the AWS Secrets Manager:
+
+https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/tree/main/2-SecretsSetup
