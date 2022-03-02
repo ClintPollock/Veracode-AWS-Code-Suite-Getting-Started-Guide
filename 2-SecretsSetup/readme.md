@@ -2,6 +2,8 @@
 
 Next we will setup credentials in the AWS Secrets Manager so we can use Veracode and dockerhub services. We will setup Veracode API and Key and your dockerhub username and password. If you don’t have one, create a free dockerhub account. This is needed so that you can download the docker image into AWS CodeBuild.  It may take several tries to get the CodeBuild projects right. Use the output log to troubleshoot.
 
+You'll also need to have a Veracode account and generate your API Credentials.  Onced logged in to Veracode, click the settings in the top right, and then API Credentials.
+
 ## Navigate to AWS Secrets Manager
 
 ![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/2-SecretsSetup/1-secrets.png)
