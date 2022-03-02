@@ -1,4 +1,4 @@
-# Veracode API Keys and Docker Secrets configuration
+# Veracode API Keys and Docker Secrets Configuration
 
 Next we will setup credentials in the AWS Secrets Manager so we can use Veracode and dockerhub services. We will setup Veracode API and Key and your dockerhub username and password. If you don’t have one, create a free dockerhub account. This is needed so that you can download the docker image into AWS CodeBuild.  It may take several tries to get the CodeBuild projects right. Use the output log to troubleshoot.
 
@@ -29,6 +29,7 @@ Next, retrieve the ARN values for the Dockerhub key and store temporarily.
 NOTE: After each CodeBuild project is created, you must follow this process to give your CodeBuild project access to the Secrets. 
 
 You will need to complete this step after each CodeBuild that you create which requires these credentials.
+
 
 ## Now we are ready to create a build project using Veracode services.
 
