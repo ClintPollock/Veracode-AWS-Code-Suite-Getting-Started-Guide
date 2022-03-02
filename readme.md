@@ -9,7 +9,9 @@ Total time for implementing is approximately 4-8 hours.
 
 For this demonstration we will use the PetStoreAPI written in Python.
 
-If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Static / SCA Code build step.
+If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Static / SCA Code build step.  If so, skip to Step 2:
+
+https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/tree/main/2-SecretsSetup
 
 This approach uses the Veracode API Wrapper Docker image for submitting the scan.
 https://hub.docker.com/r/veracode/api-wrapper-java
@@ -41,7 +43,7 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * Create VC SCA Agent build project for Docker Image
 * Setup and run a DAST scan
 
-Step 1, below.
+Step 1, below...unless you are using your own app. In that case review the below and skip to step 2.
 
 Step 2 Secrets Setup
 
