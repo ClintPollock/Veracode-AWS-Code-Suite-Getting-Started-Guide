@@ -9,7 +9,11 @@ Total time for implementing is approximately 4-8 hours.
 
 For this demonstration we will use the PetStoreAPI written in Python.
 
-AWS offers 12 months of free usage for t3.Micro instances, up to 750 hours per month. You are required to enter a credit card number, but if you keep things small, you won't see a charge.
+If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Static / SCA Code build step.
+
+This approach uses the Veracode API Wrapper Docker image for submitting the scan.
+https://hub.docker.com/r/veracode/api-wrapper-java
+
 
 Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild and CodePipeline.
 
