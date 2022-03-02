@@ -37,6 +37,17 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * Create VC SCA Agent build project for Docker Image
 * Setup and run a DAST scan
 
+Step 1, below.
+
+Step 2 Secrets Setup
+
+https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/tree/main/2-SecretsSetup
+
+https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/tree/main/2.1-SecretsPermissions
+
+Step 3 Static and SCA Scan
+
+https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/tree/main/3-Static-SCA-Scan
 
 ## Step 1 Initial Setup
 
