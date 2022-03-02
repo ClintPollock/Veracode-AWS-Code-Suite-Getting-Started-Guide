@@ -1,19 +1,68 @@
-# Secret Manager Permissions
+# Submit a Veracode Static and SCA Scan
 
-Each new CodeBuild project must get permissions to access the secrets we created, otherwise you might get this error -
+This step will download the ZIP file from the initial build CodeBuild project and submit a Veracode Static and SCA scan. 
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/2.1-SecretsPermissions/7-secrets.png)
+## Create a new CodeBuild Project
 
-To fix, we must go into the IAM service, Identity and Access Management.
+![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/3-Static-SCA-Scan/1-StaticSCA.png)
 
-Click on Roles, and then you will see your Pipeline scanner role, in this case -
+Configure the Source location as S3, with the folder name that contains your petstoreapi.zip
 
-codebuild-VeracodePipelineScan-service-role
+![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/3-Static-SCA-Scan/2-StaticSCA.png)
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/2.1-SecretsPermissions/8-secrets.png)
+This time, use this Docker image - docker.io/veracode/api-wrapper-java:latest
 
-Click on the role, and then Attach Permissions. Search for SecretsManager, and check the box, then Attach the Policy.
+Be sure to enter the ARN for the docker registry credential.
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/2.1-SecretsPermissions/9-secrets.png)
+![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/3-Static-SCA-Scan/3-StaticSCA.png)
 
-## Now we are ready to submit your CodeBuild Project.
+You can customize who this works using the options with the wrapper.
+
+The Composite Actions are the easiest -
+
+https://docs.veracode.com/r/c_wrapper_composite_actions
+
+You can also use any of these:
+
+https://docs.veracode.com/r/c_wrapper_simple_actions
+
+UploadAndScan is the primary use -
+
+https://docs.veracode.com/r/r_uploadandscan
+
+At this stage, it could be that they are doing 1:1 mapping of App Profiles and Micro Services, or perhaps they are combining micro services or components logically and sending up to an App Profile. It depends a bit on their licensing and CodePipeline flows.
+
+Sample buildspec file for submitting a Static Policy Scan.
+
+```bash
+version: 0.2
+
+env:
+  secrets-manager:
+      VID: "veracode:VID"
+      VKEY: "veracode:VKEY"
+phases:
+  build:
+    commands:
+      - java -jar /opt/veracode/api-wrapper.jar -vid $VID -vkey $VKEY -appname AWSCodeBuild-PetStoreAPI -action UploadAndScan -createprofile true -version $CODEBUILD_BUILD_ID -filepath petstoreapi.zip
+  #post_build:
+    #commands:
+      # - command
+#artifacts:
+  #files:
+    # - location
+```
+
+Save the project and then give the CodeBuild project permissions to access the Secrets Manager using these instructions.
+
+Secrets Manager Permissions:
+
+https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/tree/main/2.1-SecretsPermissions
+
+Then run the build and you should see a successful scan!
+
+If you want to break the build when it does not pass Policy add -scantimeout 30
+
+![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/3-Static-SCA-Scan/4-StaticSCA.png)
+
+In addition to breaking the CodeBuild step if there are new issues or  downloading the repot, you can also login to the Veracode platform to view results.
