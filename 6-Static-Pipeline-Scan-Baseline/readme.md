@@ -8,7 +8,7 @@ The Baseline allows you to "mitigate" findings Policy violating findings the dev
 
 The current configuration should save the results.json file as results.zip in the S3 bucket.
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/3.1-Static-Pipeline-Scan-Baseline/1-StaticPipelineBaseline.png)
+![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/6-Static-Pipeline-Scan-Baseline/1-StaticPipelineBaseline.png)
 
 Within the Pipeline Scanner CodeBuild project, click Edit, and then Source. You can see the Edit menu allows you to fix or update details about the build project.
 
@@ -174,7 +174,8 @@ drwxr-xr-x 3 root root  4096 Jan  6 13:13 ..
 If you go back to your S3 bucket you will see json files from the Pipeline scanner.  The customer could monitor these files for change in size, which would indicate a change in the data.  At this point, we don’t have a way to display information in the pull request about a Pipeline Scan, but generally, this is the direction we need to head in for all integrations in cloud CI/CD.
 
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/3.1-Static-Pipeline-Scan-Baseline/1-StaticPipelineBaseline.png)
+![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/6-Static-Pipeline-Scan-Baseline/1-StaticPipelineBaseline.png)
 
+## [Continue to SCA Advanced Scan](/7-SCA-Advanced-Scan)
 
-Continue to setup SCA Agent Scanning
+Continue to setup SCA Advanced Scanning
