@@ -55,9 +55,7 @@ phases:
 
 Save the project and then give the CodeBuild project permissions to access the Secrets Manager using these instructions.
 
-Secrets Manager Permissions:
-
-https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/tree/main/2.1-SecretsPermissions
+#### [ Setting permissions for CodeBuild projects to access AWS Secrets](/3-SecretsPermissions)
 
 Then run the build and you should see a successful scan!
 

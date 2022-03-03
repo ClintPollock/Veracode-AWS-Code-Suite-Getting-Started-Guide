@@ -177,5 +177,3 @@ If you go back to your S3 bucket you will see json files from the Pipeline scann
 ![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/6-Static-Pipeline-Scan-Baseline/1-StaticPipelineBaseline.png)
 
 ## [Continue to SCA Advanced Scan](/7-SCA-Advanced-Scan)
-
-Continue to setup SCA Advanced Scanning
