@@ -35,18 +35,18 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * Add a pass / fail check
 * Create VC SAST Pipeline build project 
 * Use a baseline file
-* Create VC SCA Agent build project for the app itself
-* Create VC SCA Agent build project for Docker Image
+* Create VC SCA  build project for the app itself
+* Create VC SCA  build project for Docker Image
 * Setup and run a DAST scan
 
 ## Steps
 
-### [Step 1 Build Project and create ZIP artifact](/2-SecretsSetup)
-### [Step 2 Setup Veracode and DockerHub API Keys in AWS Secrets](/2-SecretsSetup)
-### [Step 3 Setting permissions for CodeBuild projects to access AWS Secrets](/3-SecretsPermissions)
-### [Step 4 Static Policy and SCA Scan](/4-Static-SCA-Policy-Scan)
-### [Step 5 Static Pipeline Scan](/5-Static-Pipeline-Scan)
-### [Step 6 Static Pipeline Scan with Baseline File](/6-Static-Pipeline-Scan-Baseline)
-### [Step 7 SCA Advanced Scan](/7-SCA-Advanced-Scan)
-### [Step 8 SCA Container Scan](/8-SCA-Container-Scan)
-### [Step 9 Dynamic Scan](/9-DAST-Scan)
+#### [Step 1 Build Project and create ZIP artifact](/2-SecretsSetup)
+#### [Step 2 Setup Veracode and DockerHub API Keys in AWS Secrets](/2-SecretsSetup)
+#### [Step 3 Setting permissions for CodeBuild projects to access AWS Secrets](/3-SecretsPermissions)
+#### [Step 4 Static Policy and SCA Scan](/4-Static-SCA-Policy-Scan)
+#### [Step 5 Static Pipeline Scan](/5-Static-Pipeline-Scan)
+#### [Step 6 Static Pipeline Scan with Baseline File](/6-Static-Pipeline-Scan-Baseline)
+#### [Step 7 SCA Advanced Scan](/7-SCA-Advanced-Scan)
+#### [Step 8 SCA Container Scan](/8-SCA-Container-Scan)
+#### [Step 9 Dynamic Scan](/9-DAST-Scan)
