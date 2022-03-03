@@ -8,13 +8,13 @@ This step will download the ZIP file from the initial build CodeBuild project an
 
 Configure the Source location as S3, with the folder name that contains your petstoreapi.zip
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/images/4-Static-SCA-Policy-Scan/images/2-StaticSCA.png)
+![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/4-Static-SCA-Policy-Scan/images/2-StaticSCA.png)
 
 This time, use this Docker image - docker.io/veracode/api-wrapper-java:latest
 
 Be sure to enter the ARN for the docker registry credential.
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/images/4-Static-SCA-Policy-Scan/images/3-StaticSCA.png)
+![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/4-Static-SCA-Policy-Scan/images/3-StaticSCA.png)
 
 You can customize who this works using the options with the wrapper.
 
@@ -30,9 +30,9 @@ UploadAndScan is the primary use -
 
 https://docs.veracode.com/r/r_uploadandscan
 
-At this stage, it could be that they are doing 1:1 mapping of App Profiles and Micro Services, or perhaps they are combining micro services or components logically and sending up to an App Profile. It depends a bit on their licensing and CodePipeline flows.
+At this stage, it could be that you are doing 1:1 mapping of App Profiles and Micro Services, or better, group micro services or components logically and send the artifact for a Policy Scan. This will allow for governance and remidation.  If developers want to shift further left, they can try the Static Pipelien scanner.
 
-Sample buildspec file for submitting a Static Policy Scan.
+Sample buildspec file for submitting a Static Policy Scan:
 
 ```bash
 version: 0.2
