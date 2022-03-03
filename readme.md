@@ -5,9 +5,7 @@ How to setup an AWS CodeBuild project with Veracode Static and SCA Analysis.
 ## Overview
 A complete guide on setting up an Amazon Web Services Demo Account that uses Veracode Services.
 
-Total time for implementing is approximately 4-8 hours. 
-
-For this demonstration we will use the PetStoreAPI written in Python.
+For this demonstration we will use the PetStoreAPI written in Python.  
 
 If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Static / SCA Code build step.  If so [Proceed to Step  2](/2-SecretsSetup).
 
