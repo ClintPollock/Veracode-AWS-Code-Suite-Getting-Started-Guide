@@ -41,7 +41,7 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 
 ## Steps
 
-#### [Step 1 Build Project and create ZIP artifact](/2-SecretsSetup)
+#### [Step 1 Build Project and create ZIP artifact](/1-InitialSetup)
 #### [Step 2 Setup Veracode and DockerHub API Keys in AWS Secrets](/2-SecretsSetup)
 #### [Step 3 Setting permissions for CodeBuild projects to access AWS Secrets](/3-SecretsPermissions)
 #### [Step 4 Static Policy and SCA Scan](/4-Static-SCA-Policy-Scan)
