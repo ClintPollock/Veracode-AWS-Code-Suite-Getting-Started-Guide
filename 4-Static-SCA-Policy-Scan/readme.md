@@ -65,4 +65,14 @@ If you want to break the build when it does not pass Policy add -scantimeout 30
 
 ![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/4-Static-SCA-Policy-Scan/4-StaticSCA.png)
 
-In addition to breaking the CodeBuild step if there are new issues or downloading the repot, you can also login to the Veracode platform to view results.
+In addition to breaking the CodeBuild step if there are new issues or downloading the report, you can also login to the Veracode platform to view results.
+
+A Static Policy and SCA scan is generally all that is required.  Optionally, setup Static Pipeline Scanner, DAST scanning, advanced SCA scanning, and SCA Container Scanning.
+
+## [Static Pipeline Scanner](/5-Static-Pipeline-Scan)
+
+## [SCA Advanced Scan](/7-SCA-Advanced-Scan)
+
+## [SCA Container Scan](/7-SCA-Container-Scan)
+
+## [Dynamic Scan](/9-DAST-Scan)

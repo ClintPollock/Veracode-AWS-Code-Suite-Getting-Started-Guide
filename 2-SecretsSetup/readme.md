@@ -26,12 +26,7 @@ Next, retrieve the ARN values for the DockerHub key and store temporarily.
 
 ![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/2-SecretsSetup/6-secrets.png)
 
-## Secrets Manager Permissions
 
-NOTE: After each CodeBuild project is created, you must follow this process to give your CodeBuild project access to the Secrets:
+# [Proceed to Step  3](/2-SecretsPermissions)
 
-https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/tree/main/3-SecretsPermissions
-
-## Now we are ready to create a build project using Veracode services.
-
-Continue to setup a Static and SCA scan
+NOTE: After each CodeBuild project is created, you must follow this process to give your CodeBuild project premissions to the Secrets.
