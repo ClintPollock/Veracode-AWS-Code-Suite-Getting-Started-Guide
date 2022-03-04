@@ -19,7 +19,7 @@ Click Edit - Buildspec
 Under the Build:Commands section uncomment these sections:
 
 ```bash
- - unzip results.zip
+- unzip results.zip
 ```
 
 ```bash
