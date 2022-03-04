@@ -96,7 +96,6 @@ drwxr-xr-x 3 root root 4096 Jan  6 12:27 ..
 pipeline-scan.jar
 
 [Container] 2022/01/06 12:27:21 Running command java -jar /opt/veracode/pipeline-scan.jar -vid $VID -vkey $VKEY --file petstoreapi.zip
-WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
 [06 Jan 2022 12:27:21,0983] PIPELINE-SCAN INFO: Pipeline Scan Tool Version 21.12.1-0. 
 [06 Jan 2022 12:27:21,0989] PIPELINE-SCAN INFO: Beginning scanning of 'petstoreapi.zip'. 
 [06 Jan 2022 12:27:21,0990] PIPELINE-SCAN INFO: Sending 7828 bytes to the server for analysis. 

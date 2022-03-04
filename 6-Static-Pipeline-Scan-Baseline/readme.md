@@ -1,6 +1,6 @@
 # Veracode Static Pipeline Scanner with Baseline File
 
-The Baseline allows you to "mitigate" findings Policy violating findings the developers do not plan to fix. 
+The Baseline allows you to surpress Policy violating flaws the developers do not plan to fix. 
 
  Micro services are a great place to start with Pipeline scanner because they often have few flaws due to their small size. Not all micro services will need to use this since many micro services may not have any flaws to begin with.  The Static Pipeline scanner can be run on each PR to ensure it stays that way.
 
@@ -105,7 +105,6 @@ Archive:  results.zip
   inflating: results.json            
 
 [Container] 2022/01/06 13:13:58 Running command java -jar /opt/veracode/pipeline-scan.jar -vid $VID -vkey $VKEY --file petstoreapi.zip -bf results.json
-WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
 [06 Jan 2022 13:13:59,0078] PIPELINE-SCAN INFO: Pipeline Scan Tool Version 21.12.1-0. 
 [06 Jan 2022 13:13:59,0108] PIPELINE-SCAN INFO: Beginning scanning of 'petstoreapi.zip'. 
 [06 Jan 2022 13:13:59,0109] PIPELINE-SCAN INFO: Sending 7828 bytes to the server for analysis. 
