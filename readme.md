@@ -21,12 +21,12 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * CodePipeline - pull in the CodeBuild steps to the appropriate point in your CodePipeline.
 
 
-### General Flow Basic
+### General Flow [QuickStart](QuickStart)
 * Create CodeCommit Repository 
 * ZIP artifact and scan
 
 
-### General Flow Advanced
+### General Flow [Advanced](Advanced)
 * Create CodeCommit Repository 
 * Create Cloud9 IDE environment
 * Create S3 bucket for artifact storage

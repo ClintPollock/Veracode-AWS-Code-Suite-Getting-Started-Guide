@@ -1,22 +1,22 @@
-# AWS CodeSuite and Veracode
+# AWS CodeSuite and Veracode Advanced
 
-How to setup an AWS CodeBuild project with Veracode Static and SCA Analysis
+How to setup an AWS CodeBuild project with additional capability.
 
 ## Overview
 A complete guide on setting up an Amazon Web Services Demo Account that uses Veracode Services.
 
 For this demonstration we will use the PetStoreAPI written in Python.  
 
-If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Static / SCA Code build step.  If so [Proceed to Step  2](/2-SecretsSetup).
+If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Static / SCA Code build step.  If so [Proceed to Step  2](2-SecretsSetup).
 
 This approach uses the Veracode API Wrapper Docker image for submitting the scan.  
 
 Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild and CodePipeline.
 
 Start with the basic approach to get a scan working and then review the advanced options to understand all capability.
-The basic requirement is a consistent Policy Static+SCA scan.  If there are multiple web services we suggest you bundle them up into a ZIP file and submit them to a Veracode Application profile for tracking.
+The basic requirement for governance purposes is a consistent Policy Static+SCA scan.  If there are multiple web services we suggest you bundle them up into a ZIP file and submit them to a Veracode Application profile for tracking.
 
-From there, you might leverage some of the options in the advanced approach.
+From there, you might leverage some of the options in this advanced approach.
 
 ### AWS products we’ll use:
 
@@ -48,7 +48,7 @@ From there, you might leverage some of the options in the advanced approach.
 #### [Step 2 Setup Veracode and DockerHub API Keys in AWS Secrets](2-SecretsSetup)
 #### [Step 3 Setting permissions for CodeBuild projects to access AWS Secrets](3-SecretsPermissions)
 #### [Step 4 Static Policy and SCA Scan](4-Static-SCA-Policy-Scan)
-#### [Step 5 Static Pipeline Scan](/-Static-Pipeline-Scan)
+#### [Step 5 Static Pipeline Scan](-Static-Pipeline-Scan)
 #### [Step 6 Static Pipeline Scan with Baseline File](6-Static-Pipeline-Scan-Baseline)
 #### [Step 7 SCA Advanced Scan](7-SCA-Advanced-Scan)
 #### [Step 8 SCA Container Scan](8-SCA-Container-Scan)

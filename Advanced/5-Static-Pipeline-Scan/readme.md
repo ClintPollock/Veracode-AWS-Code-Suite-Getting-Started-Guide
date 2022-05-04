@@ -7,17 +7,17 @@ https://docs.veracode.com/r/c_about_pipeline_scan
 
 ## Create a new build project
 
-![AWS Code](5-Static-Pipeline-Scan/images/1-StaticPipeline.png)
+![AWS Code](images/1-StaticPipeline.png)
 
 The Source should be set to Amazon S3, enter your bucket name, and you enter the folder name. You can browse to the S3 service in the AWS console to your bucket and see the file structure.
 
-![AWS Code](5-Static-Pipeline-Scan/images/2-StaticPipeline.png)
+![AWS Code](images/2-StaticPipeline.png)
 
 Here is where we set the environment to use our Docker image. Build tools do not exist in the Veracode Docker image, this is why we have a build and artifact step using the default image, and then use our Docker image to run the Pipeline scan. The docker image is docker.io/veracode/pipeline-scan:latest
 
 Paste in the ARN of your dockerhub secret into Registry Credential.
 
-![AWS Code](5-Static-Pipeline-Scan/images/3-StaticPipeline.png)
+![AWS Code](images/3-StaticPipeline.png)
 
 Click the Insert Build Commands and add modify the following three areas, or copy and paste the code from below the next three screenshots.
 
@@ -53,7 +53,7 @@ artifacts:
 
 Configure the Artifacts to use your S3 bucket, and enter the folder name that you see in the S3 bucket.
 
-![AWS Code](5-Static-Pipeline-Scan/images/4-StaticPipeline.png)
+![AWS Code](images/4-StaticPipeline.png)
 
 Next, give the CodeBuild project permissions to access the Secrets Manager using these instructions.
 
@@ -194,7 +194,7 @@ Navigate to the S3 bucket and you will now see there is another artifact contain
 
 Now lets setup the Pipeline Scanner to use the Baseline file. Of course we would never want something to ship that has the kind of vulns that PetStoreAPI has, and they should be fixed. The baseline file is only needed if the developers have Policy violating flaws that they do not plan to fix. 
 
-![AWS Code](5-Static-Pipeline-Scan/images/5-StaticPipeline.png)
+![AWS Code](images/5-StaticPipeline.png)
 
 
-## [Static Pipeline Scanner with Baseline File](/6-Static-Pipeline-Scan-Baseline)
+## [Static Pipeline Scanner with Baseline File](6-Static-Pipeline-Scan-Baseline)

@@ -8,11 +8,11 @@ The Baseline allows you to surpress Policy violating flaws the developers do not
 
 The current configuration should save the results.json file as results.zip in the S3 bucket.
 
-![AWS Code](6-Static-Pipeline-Scan-Baseline/images/1-StaticPipelineBaseline.png)
+![AWS Code](images/1-StaticPipelineBaseline.png)
 
 Within the Pipeline Scanner CodeBuild project, click Edit, and then Source. You can see the Edit menu allows you to fix or update details about the build project.
 
-![AWS Code](6-Static-Pipeline-Scan-Baseline/images/2-StaticPipelineBaseline.png)
+![AWS Code](images/2-StaticPipelineBaseline.png)
 
 Click Edit - Buildspec
 
@@ -175,6 +175,6 @@ drwxr-xr-x 3 root root  4096 Jan  6 13:13 ..
 If you go back to your S3 bucket you will see json files from the Pipeline scanner.  The customer could monitor these files for change in size, which would indicate a change in the data.  At this point, we don’t have a way to display information in the pull request about a Pipeline Scan, but generally, this is the direction we need to head in for all integrations in cloud CI/CD.
 
 
-![AWS Code](6-Static-Pipeline-Scan-Baseline/images/3-StaticPipelineBaseline.png)
+![AWS Code](images/3-StaticPipelineBaseline.png)
 
-## [Continue to SCA Advanced Scan](/7-SCA-Advanced-Scan)
+## [Continue to SCA Advanced Scan](7-SCA-Advanced-Scan)

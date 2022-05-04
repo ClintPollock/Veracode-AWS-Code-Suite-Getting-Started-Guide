@@ -4,17 +4,17 @@ This step will download the ZIP file from the initial build CodeBuild project an
 
 ## Create a new CodeBuild Project
 
-![AWS Code](4-Static-SCA-Policy-Scan/images/1-StaticSCA.png)
+![AWS Code](images/1-StaticSCA.png)
 
 Configure the Source location as S3, with the folder name that contains your petstoreapi.zip
 
-![AWS Code](4-Static-SCA-Policy-Scan/images/2-StaticSCA.png)
+![AWS Code](images/2-StaticSCA.png)
 
 This time, use this Docker image - docker.io/veracode/api-wrapper-java:latest
 
 Be sure to enter the ARN for the docker registry credential.
 
-![AWS Code](4-Static-SCA-Policy-Scan/images/3-StaticSCA.png)
+![AWS Code](images/3-StaticSCA.png)
 
 You can customize who this works using the options with the wrapper.
 
@@ -61,16 +61,16 @@ Then run the build and you should see a successful scan!
 
 If you want to break the build when it does not pass Policy add -scantimeout 30
 
-![AWS Code](4-Static-SCA-Policy-Scan/images/4-StaticSCA.png)
+![AWS Code](images/4-StaticSCA.png)
 
 In addition to breaking the CodeBuild step if there are new issues or downloading the report, you can also login to the Veracode platform to view results.
 
 A Static Policy and SCA scan is generally all that is required.  Optionally, setup Static Pipeline Scanner, DAST scanning, advanced SCA scanning, and SCA Container Scanning.
 
-## [Static Pipeline Scanner](/5-Static-Pipeline-Scan)
+## [Static Pipeline Scanner](5-Static-Pipeline-Scan)
 
-## [SCA Advanced Scan](/7-SCA-Advanced-Scan)
+## [SCA Advanced Scan](7-SCA-Advanced-Scan)
 
-## [SCA Container Scan](/7-SCA-Container-Scan)
+## [SCA Container Scan](8-SCA-Container-Scan)
 
-## [Dynamic Scan](/9-DAST-Scan)
+## [Dynamic Scan](9-DAST-Scan)

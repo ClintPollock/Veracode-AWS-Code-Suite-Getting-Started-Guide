@@ -6,13 +6,13 @@ SCA Agent scanning can be run in the same step which builds the app, since the s
 
 Create another CodeBuild project.
 
-![AWS Code](7-SCA-Advanced-Scan/images/1-SCA-Agent.png)
+![AWS Code](images/1-SCA-Agent.png)
 
 In the case of SCA Agent we are going to download the source raw on an image with Python.  If this were Java with Maven, Maven would need to be installed on the image.
 
-![AWS Code](7-SCA-Advanced-Scan/images/2-SCA-Agent.png)
+![AWS Code](images/2-SCA-Agent.png)
 
-![AWS Code](7-SCA-Advanced-Scan/images/3-SCA-Agent.png)
+![AWS Code](images/3-SCA-Agent.png)
 
 Use this for the buildspec.
 
@@ -37,23 +37,23 @@ artifacts:
 
 Set the Artifacts location so we can save SCA results to the S3 bucket.
 
-![AWS Code](7-SCA-Advanced-Scan/images/4-SCA-Agent.png)
+![AWS Code](images/4-SCA-Agent.png)
 
 Save project, then go into IAM - Roles and click on the role with the name similar to the CodeBuild project you created.
 
-![AWS Code](7-SCA-Advanced-Scan/images/5-SCA-Agent.png)
+![AWS Code](images/5-SCA-Agent.png)
 
 
 Attach Polices, search for SecretManagerReadWrite.
 
-![AWS Code](7-SCA-Advanced-Scan/images/6-SCA-Agent.png)
+![AWS Code](images/6-SCA-Agent.png)
 
 Run the build and you should see the SCA results!
 
-![AWS Code](7-SCA-Advanced-Scan/images/7-SCA-Agent.png)
+![AWS Code](images/7-SCA-Agent.png)
 
 We’ve also uploaded the results to the S3 bucket.
 
-![AWS Code](7-SCA-Advanced-Scan/images/8-SCA-Agent.png)
+![AWS Code](images/8-SCA-Agent.png)
 
 ## [Continue to SCA Container Scan](/8-SCA-Container-Scan)
