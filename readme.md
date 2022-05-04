@@ -23,7 +23,7 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 
 ### General Flow [QuickStart](QuickStart)
 * Create CodeCommit Repository 
-* ZIP artifact and scan
+* Create CodeBuild project, ZIP artifact and scan
 
 
 ### General Flow [Advanced](Advanced)
