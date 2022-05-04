@@ -6,7 +6,7 @@ https://console.aws.amazon.com/
 
 Once signed up, navigate to CodeCommit, and create a repository called PetStoreAPI
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/1-InitialSetup/images/1-AWSCodeCommit.png)
+![AWS Code](images/1-AWSCodeCommit.png)
 
 Note the Clone URL for later use.
 Now we need to get the PetStoreAPI code into AWS CodeCommit. One of the easier ways of doing this is to use an AWS Cloud9 IDE.
