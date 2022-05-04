@@ -2,13 +2,13 @@
 
 Create a new BuildProject.
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/8-SCA-Container-Scan/images/1-SCA-Agent-Container.png)
+![AWS Code](8-SCA-Container-Scan/images/1-SCA-Agent-Container.png)
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/8-SCA-Container-Scan/images/2-SCA-Agent-Container.png)
+![AWS Code](8-SCA-Container-Scan/images/2-SCA-Agent-Container.png)
 
 Be sure to check the box Enable this flag to build Docker Images.
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/8-SCA-Container-Scan/images/3-SCA-Agent-Container.png)
+![AWS Code](8-SCA-Container-Scan/images/3-SCA-Agent-Container.png)
 
 Use buildspec:
 
@@ -35,12 +35,12 @@ artifacts:
 
 Set artifact location
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/8-SCA-Container-Scan/images/4-SCA-Agent-Container.png)
+![AWS Code](8-SCA-Container-Scan/images/4-SCA-Agent-Container.png)
 
 Before running the build, repeat the secrets permissions process, and then run the build.
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/8-SCA-Container-Scan/images/5-SCA-Agent-Container.png)
+![AWS Code](8-SCA-Container-Scan/images/5-SCA-Agent-Container.png)
 
 You’ll also notice the SCA Docker output has been stored in our S3 bucket.
 
-![AWS Code](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/raw/main/8-SCA-Container-Scan/images/6-SCA-Agent-Container.png)
+![AWS Code](8-SCA-Container-Scan/images/6-SCA-Agent-Container.png)

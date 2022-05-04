@@ -20,7 +20,13 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * CodeBuild - this is the primary area we integrate Veracode commands. 
 * CodePipeline - pull in the CodeBuild steps to the appropriate point in your CodePipeline.
 
-### General Flow
+
+### General Flow Basic
+* Create CodeCommit Repository 
+* ZIP artifact and scan
+
+
+### General Flow Advanced
 * Create CodeCommit Repository 
 * Create Cloud9 IDE environment
 * Create S3 bucket for artifact storage
@@ -36,15 +42,3 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * Create VC SCA  build project for the app itself
 * Create VC SCA  build project for Docker Image
 * Setup and run a DAST scan
-
-## Steps
-
-#### [Step 1 Build Project and create ZIP artifact](/1-InitialSetup)
-#### [Step 2 Setup Veracode and DockerHub API Keys in AWS Secrets](/2-SecretsSetup)
-#### [Step 3 Setting permissions for CodeBuild projects to access AWS Secrets](/3-SecretsPermissions)
-#### [Step 4 Static Policy and SCA Scan](/4-Static-SCA-Policy-Scan)
-#### [Step 5 Static Pipeline Scan](/5-Static-Pipeline-Scan)
-#### [Step 6 Static Pipeline Scan with Baseline File](/6-Static-Pipeline-Scan-Baseline)
-#### [Step 7 SCA Advanced Scan](/7-SCA-Advanced-Scan)
-#### [Step 8 SCA Container Scan](/8-SCA-Container-Scan)
-#### [Step 9 Dynamic Scan](/9-DAST-Scan)
