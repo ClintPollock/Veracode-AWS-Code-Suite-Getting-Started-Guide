@@ -67,10 +67,10 @@ In addition to breaking the CodeBuild step if there are new issues or downloadin
 
 A Static Policy and SCA scan is generally all that is required.  Optionally, setup Static Pipeline Scanner, DAST scanning, advanced SCA scanning, and SCA Container Scanning.
 
-## [Static Pipeline Scanner](5-Static-Pipeline-Scan)
+## [Static Pipeline Scanner](/Advanced/5-Static-Pipeline-Scan)
 
-## [SCA Advanced Scan](7-SCA-Advanced-Scan)
+## [SCA Advanced Scan](/Advanced/7-SCA-Advanced-Scan)
 
-## [SCA Container Scan](8-SCA-Container-Scan)
+## [SCA Container Scan](/Advanced/8-SCA-Container-Scan)
 
-## [Dynamic Scan](9-DAST-Scan)
+## [Dynamic Scan](/Advanced/9-DAST-Scan)

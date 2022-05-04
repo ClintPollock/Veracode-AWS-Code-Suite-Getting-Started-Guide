@@ -56,4 +56,4 @@ We’ve also uploaded the results to the S3 bucket.
 
 ![AWS Code](images/8-SCA-Agent.png)
 
-## [Continue to SCA Container Scan](/8-SCA-Container-Scan)
+## [Continue to SCA Container Scan](/Advanced/8-SCA-Container-Scan)

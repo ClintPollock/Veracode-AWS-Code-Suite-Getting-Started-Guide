@@ -1,0 +1,20 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      # this command helps you see the files in the build server folder, helps you to troubleshoot.
+      - ls -la
+      # - command
+  build:
+    commands:
+      - unzip -o petstore-api-flask-main.zip
+      # this will prepare an optimized ZIP file for upload which contains only the files we need.
+      - zip petstore.zip petstore-api-flask-main/api.py petstore-api-flask-main/requirements.txt
+      # - command
+  #post_build:
+    #commands:
+      - java -jar VeracodeJavaAPI.jar -vid VIDHERE -vkey VKEYHERE -appname AWSCodeBuild-PetStoreAPI -action UploadAndScan -createprofile true -version $CODEBUILD_BUILD_ID -filepath petstore.zip
+#artifacts:
+  #files:
+    # - location
+    # - location

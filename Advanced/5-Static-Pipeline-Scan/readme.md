@@ -197,4 +197,4 @@ Now lets setup the Pipeline Scanner to use the Baseline file. Of course we would
 ![AWS Code](images/5-StaticPipeline.png)
 
 
-## [Static Pipeline Scanner with Baseline File](6-Static-Pipeline-Scan-Baseline)
+## [Static Pipeline Scanner with Baseline File](/Advanced/6-Static-Pipeline-Scan-Baseline)

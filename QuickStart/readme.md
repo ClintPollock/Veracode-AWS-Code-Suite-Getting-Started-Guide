@@ -23,7 +23,7 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 
 Get started scanning with Veracode and AWS quickly using Static + SCA Policy scan. 
 
-Since flaws are generally not added on a day to day basis the only basic requirement is to have a SAST+SCA scan of the same artifact, built the same way, on a regular basis.  Some developers may shift left, but if you don’t add new flaws for 3 months in an app, you probably don’t need to scan every PR. Gather data is critical so that we can make good decisions on where to focus efforts and balance the risk. 
+Since flaws are generally not added on a day to day basis the only basic requirement is to have a SAST+SCA scan of the same artifact, built the same way, on a regular basis.  Some developers may shift left, but if you don’t add new flaws for 3 months in an app, you probably don’t need to scan every PR. Gathering data is critical so that we can make good decisions on where to focus efforts and balance the risk. 
 
 For the Quick Start we will use a simple Python app.
 

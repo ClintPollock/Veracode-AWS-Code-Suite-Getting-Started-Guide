@@ -17,6 +17,6 @@ Click on the role, and then Attach Permissions. Search for SecretsManager, and c
 ![AWS Code](images/9-secrets.png)
 
 
-## [Proceed to Step  4](4-Static-SCA-Policy-Scan)
+## [Proceed to Step  4](/Advanced/4-Static-SCA-Policy-Scan)
 
 Now we are ready to add the step for Static Policy and SCA scans.

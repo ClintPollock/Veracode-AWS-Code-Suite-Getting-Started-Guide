@@ -129,5 +129,5 @@ Here you can see the artifact in your S3 bucket.
 
 ![AWS Code](images/24-AWSCodeBuild.png)
 
-## [Proceed to Step  2](2-SecretsSetup)
+## [Proceed to Step  2](/Advanced/2-SecretsSetup)
 Setting up the Veracode VID, VKEY, and SRCCLR_API_TOKEN in the AWS Secrets Manager.

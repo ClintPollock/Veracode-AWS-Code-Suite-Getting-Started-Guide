@@ -177,4 +177,4 @@ If you go back to your S3 bucket you will see json files from the Pipeline scann
 
 ![AWS Code](images/3-StaticPipelineBaseline.png)
 
-## [Continue to SCA Advanced Scan](7-SCA-Advanced-Scan)
+## [Continue to SCA Advanced Scan](/Advanced/7-SCA-Advanced-Scan)
