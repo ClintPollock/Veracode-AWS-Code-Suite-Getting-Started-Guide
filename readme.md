@@ -32,9 +32,13 @@ For this demonstration we will use the PetStoreAPI written in Python.
 
 ### More information
 View more information in this four part video series using AWS Cloud9 IDE with Veracode services.
+
 https://www.youtube.com/watch?v=P6QDC94R_bU
+
 https://www.youtube.com/watch?v=oHw-qR9AEx8
+
 https://www.youtube.com/watch?v=GOLoShMMUBw
+
 https://www.youtube.com/watch?v=ndzAMaPQ_eE
 
 
