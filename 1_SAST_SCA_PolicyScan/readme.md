@@ -23,7 +23,7 @@ Login to the Veracode platform and generate your API keys.
 
 * Static, Software Composition Analysis, and Dynamic API scanning
 
-### General Flow Quick Start
+### Steps
 * Generate Veracode API Keys in Veracode platform
 * Create CodeBuild Project in AWS
 * Use the below sample buildspec.yml to checkout code, artifact code, and scan artifact for security flaws.
