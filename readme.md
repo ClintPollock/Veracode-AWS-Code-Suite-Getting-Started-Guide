@@ -1,30 +1,26 @@
 # AWS CodeSuite and Veracode
 
-How to setup an AWS CodeBuild project with Veracode Static and SCA Analysis.
+How to setup an AWS CodeBuild project with Veracode Static, SCA, and Dynamic Analysis.
 
 ## Overview
 A complete guide on setting up an Amazon Web Services Demo Account that uses Veracode Services.
 
 For this demonstration we will use the PetStoreAPI written in Python.  
 
-If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Static / SCA Code build step.  If so [Proceed to Step  2](/2-SecretsSetup).
-
-This approach uses the Veracode API Wrapper Docker image for submitting the scan.  
-
 Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild and CodePipeline.
 
 ### AWS products we’ll use:
 
-* Cloud9 IDE (very fun and powerful IDE)
-* CodeCommit - this is where we’ll place the PetStoreAPI code.
 * CodeBuild - this is the primary area we integrate Veracode commands. 
-* CodePipeline - pull in the CodeBuild steps to the appropriate point in your CodePipeline.
+* Cloud9 IDE (very fun and powerful IDE) - we'll use this to run a Docker image for the DAST scan.
 
+### SAST + SCA General Flow [QuickStart SAST+SCA](QuickStartSAST-SCA)
+* Create CodeBuild project, enter API keys in environment variables, paste buildspec, and submit.
 
-### General Flow [QuickStart](QuickStart)
-* Create CodeCommit Repository 
-* Create CodeBuild project, ZIP artifact and scan
-
+### DAST General Flow [QuickStart SAST+SCA](QuickStartSAST-SCA)
+* Use Cloud9 IDE to run the PetstoreAPI Docker Image
+* Allow Veracode IP address to Cloud9 via security group
+* Submit the DAST scan
 
 ### General Flow [Advanced](Advanced)
 * Create CodeCommit Repository 
