@@ -5,7 +5,7 @@ How to setup an AWS CodeBuild project with Veracode Static, SCA, and Dynamic Ana
 ## Overview
 A complete guide on setting leveraging Veracode services with Amazon Web Services CodeSuite.
 
-Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild and CodePipeline.
+Veracode integrates with products in the AWS CodeSuite such as CodeBuild and CodePipeline.
 
 For this demonstration we will use the PetStoreAPI written in Python.  
 

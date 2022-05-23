@@ -30,16 +30,16 @@ Login to the Veracode platform and generate your API keys.
 
 For the Quick Start we will use a simple Python app.
 
-You can download the source code from here.  The sample buildspec.yml will automatically download the code, zip it, and scan it.  
-
-GitHub - veracode/petstore-api-flask: A vulnerable API based on the Swagger Petstore API, built in Flask. 
+You can download the source code from here if you like.  The sample buildspec.yml provided will automatically download the code, zip it, and scan it.  
 
 https://github.com/veracode/petstore-api-flask
 
 Create Build Project
+
 ![AWS Code](images/1-QuickStart.png)
 
-Select No source (the buildspec.yml will download it)
+Select No source (the below buildspec.yml will download the source code for us)
+
 ![AWS Code](images/2-QuickStart.png)
 
 Use the below values in the Environment section and then expand the Additional configuration section.
@@ -50,41 +50,48 @@ Create two environment variables, VID and VKEY and enter your Veracode API crede
 
 ![AWS Code](images/4-QuickStart.png)
 
-Click insert build commands and then switch to editor and enter the YAML below.
+Click insert build commands and then switch to editor and enter the YAML below.  This example uses the Veracode Wrapper to assist with scan submission. See a full list of options here - https://docs.veracode.com/r/r_wrapper_parameters
+
 
 ![AWS Code](images/5-QuickStart.png)
+
 
 ```bash
 version: 0.2
 
 phases:
   build:
-      # It was then downloaded locally based on the Source Configuration for this project to pull from the S3 bucket."
     commands:
       # Checkout Code
       - git clone https://github.com/veracode/petstore-api-flask
-      # this will create an optimized ZIP file for scanning which contains only the files we need.
+      # Create an optimized ZIP file for scanning which contains only the files we need
       - zip petstore-api.zip petstore-api-flask/api.py petstore-api-flask/requirements.txt
   post_build:
-    # Here we are downloading the Veracode API wrapper and submitting the app for a Static Policy + SCA scan
+    # Downloading the Veracode API wrapper and submit the app for a Static Policy + SCA scan
     commands:
       - curl -O https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/22.5.10.0/vosp-api-wrappers-java-22.5.10.0.jar
       - java -jar vosp-api-wrappers-java-22.5.10.0.jar -vid $VID -vkey $VKEY -appname AWSCodeBuild-PetStoreAPIv4 -action UploadAndScan -createprofile true -criticality Medium -version $CODEBUILD_BUILD_ID -filepath petstore-api.zip
       # Login to the Veracode platform to see results. Visit here to more options - https://docs.veracode.com/r/r_wrapper_parameters
 ```
 
+Be sure to remove the existing sample yml before pasting this yml.
+
 ![AWS Code](images/6-QuickStart.png)
 
 Start the build
+
 ![AWS Code](images/7-QuickStart.png)
 
 It should succeed
+
 ![AWS Code](images/8-QuickStart.png)
 
 Review the log
+
 ![AWS Code](images/9-QuickStart.png)
 
 Navigate to the Veracode platform to view the results
+
 ![AWS Code](images/10-QuickStart.png)
 
 Consistency in scan results is what helps us to be successful in managing application security risk.  From here, we can clearly see when a new flaw is added.  Consult Veracode Support for more advice on architecting this into your pipeline workflow.
