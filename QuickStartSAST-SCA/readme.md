@@ -97,6 +97,6 @@ Navigate to the Veracode platform to view the results.  This is a purposely buil
 
 Consistency in scan results is what helps us to be successful in managing application security risk.  From here, we can clearly see when a new flaw is added.  Consult Veracode Support for more advice on architecting this into your pipeline workflow.
 
-### [Try a DAST scan](/QuickStart-DAST)
+### Try a DAST scan [Quickstart-DAST](/QuickStart-DAST)
 
-## [If you are looking to go further, see the AWS Veracode Advanced guide](/Advanced)
+### If you are looking to go further, see the [AWS Veracode Advanced guide](/Advanced)
