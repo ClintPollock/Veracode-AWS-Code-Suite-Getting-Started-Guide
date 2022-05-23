@@ -2,14 +2,13 @@ version: 0.2
 
 phases:
   build:
-      # It was then downloaded locally based on the Source Configuration for this project to pull from the S3 bucket."
     commands:
-      # Checkout Code
+      # Checkout code
       - git clone https://github.com/veracode/petstore-api-flask
-      # this will create an optimized ZIP file for scanning which contains only the files we need.
+      # Create an optimized ZIP file for scanning which contains only the files we need
       - zip petstore-api.zip petstore-api-flask/api.py petstore-api-flask/requirements.txt
   post_build:
-    # Here we are downloading the Veracode API wrapper and submitting the app for a Static Policy + SCA scan
+    # Download the Veracode API wrapper and submit the app for a Static Policy + SCA scan
     commands:
       - curl -O https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/22.5.10.0/vosp-api-wrappers-java-22.5.10.0.jar
       - java -jar vosp-api-wrappers-java-22.5.10.0.jar -vid $VID -vkey $VKEY -appname AWSCodeBuild-PetStoreAPIv4 -action UploadAndScan -createprofile true -criticality Medium -version $CODEBUILD_BUILD_ID -filepath petstore-api.zip

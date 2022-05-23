@@ -23,18 +23,8 @@ For this demonstration we will use the PetStoreAPI written in Python.
 * Submit the DAST scan
 
 ### General Flow [Advanced](Advanced)
-* Create CodeCommit Repository 
-* Create Cloud9 IDE environment
 * Create S3 bucket for artifact storage
-* Clone PetStoreAPI 
-* Push PetStoreAPI to AWS CodeCommit.
-* Create AWS CodeBuild project to build the app
-* Create VC API secrets and store in Secrets Manager
-* Create DockerHub account
-* Create VC SAST Policy build project 
-* Add a pass / fail check
-* Create VC SAST Pipeline build project 
-* Use a baseline file
-* Create VC SCA  build project for the app itself
-* Create VC SCA  build project for Docker Image
+* Create AWS CodeBuild project to submit the scan
+* Pull request or component scanning with the SAST Pipeline scanner
+* Create OSS Bill of Materials (SCA) for the Docker image itself
 * Setup and run a DAST scan
