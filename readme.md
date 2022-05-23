@@ -14,10 +14,10 @@ For this demonstration we will use the PetStoreAPI written in Python.
 * CodeBuild - this is the primary area we integrate Veracode commands. 
 * Cloud9 IDE (very fun and powerful IDE) - we'll use this to run a Docker image for the DAST scan.
 
-### SAST + SCA General Flow [QuickStart SAST+SCA](QuickStartSAST-SCA)
+### [SAST + SCA General Flow ](1_SAST_SCA_PolicyScan)
 * Create CodeBuild project, enter API keys in environment variables, paste buildspec, and submit.
 
-### DAST General Flow [QuickStart DAST](QuickStartSAST-DAST)
+### [DAST General Flow ](2_DAST)
 * Use Cloud9 IDE to run the PetstoreAPI Docker Image
 * Allow Veracode IP address to Cloud9 via security group
 * Submit the DAST scan
