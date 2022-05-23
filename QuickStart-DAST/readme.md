@@ -66,7 +66,7 @@ In the left under Security Groups, create a new group.
 ![AWS Code](images/7-QuickStartDAST.png)
 
 
-Allow port TCP port 8080 open for 34.195.146.191/32.  You might include your home or office IP address so you can perform basic accessibility checks.
+Allow port TCP port 8080 open for 34.195.146.191/32.  This is the single Veracode IP address that DAST traffic will come from. You might include your home or office IP address so you can perform basic accessibility checks.
 
 Note the Public IP address.  You can also run this command from the Cloud9 IDE terminal to get the public IP of your Cloud9 IDE.
 
@@ -114,8 +114,8 @@ Schedule the scan for an hour and submit.
 
 Be sure to Link the scan to an application profile so you can have SAST + SCA + DAST results in one location.
 
-![AWS Code](images/17-QuickStartDAST.png)
+![AWS Code](images/18-QuickStartDAST.png)
 
-DAST scanning can be done as often as you wish.  There is a point of diminishing return. Start by setting up a recurring weekly or monthly scan and increase from there as needed.
+DAST scanning can be done as often as you wish.  Start by setting up a recurring monthly scan and increase from there as needed.  You can also use our DAST API to submit scans from your pipeline.  See the Advanced section.
 
-## [If you are looking to go further, see the AWS Veracode Advanced guide](/Advanced)
+## If you are looking to go further, see the [AWS Veracode Advanced Guide](/Advanced)
