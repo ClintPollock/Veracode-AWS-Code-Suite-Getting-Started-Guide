@@ -26,11 +26,11 @@ You can also use any of these:
 
 https://docs.veracode.com/r/c_wrapper_simple_actions
 
-UploadAndScan is the primary use -
+UploadAndScan is the primary action used -
 
 https://docs.veracode.com/r/r_uploadandscan
 
-At this stage, it could be that you are doing 1:1 mapping of App Profiles and Micro Services, or better, group micro services or components logically and send the artifact for a Policy Scan. This will allow for governance and remidation.  If developers want to shift further left, they can try the Static Pipelien scanner.
+At this stage, it could be that you are doing 1:1 mapping of App Profiles and Micro Services, or better, group micro services or components logically and send the artifact for a Policy Scan. This will allow for governance and remediation.  If developers want to shift further left, they can try the Static Pipeline scanner.
 
 Sample buildspec file for submitting a Static Policy Scan:
 
