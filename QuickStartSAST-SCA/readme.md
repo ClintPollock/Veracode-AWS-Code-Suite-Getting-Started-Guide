@@ -55,6 +55,7 @@ Click insert build commands and then switch to editor and enter the YAML below. 
 
 ![AWS Code](images/5-QuickStart.png)
 
+Be sure to remove the existing sample yml before pasting this yml.
 
 ```bash
 version: 0.2
@@ -62,19 +63,19 @@ version: 0.2
 phases:
   build:
     commands:
-      # Checkout Code
+      # Checkout code
       - git clone https://github.com/veracode/petstore-api-flask
       # Create an optimized ZIP file for scanning which contains only the files we need
       - zip petstore-api.zip petstore-api-flask/api.py petstore-api-flask/requirements.txt
   post_build:
-    # Downloading the Veracode API wrapper and submit the app for a Static Policy + SCA scan
+    # Download the Veracode API wrapper and submit the app for a Static Policy + SCA scan
     commands:
       - curl -O https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/22.5.10.0/vosp-api-wrappers-java-22.5.10.0.jar
       - java -jar vosp-api-wrappers-java-22.5.10.0.jar -vid $VID -vkey $VKEY -appname AWSCodeBuild-PetStoreAPIv4 -action UploadAndScan -createprofile true -criticality Medium -version $CODEBUILD_BUILD_ID -filepath petstore-api.zip
       # Login to the Veracode platform to see results. Visit here to more options - https://docs.veracode.com/r/r_wrapper_parameters
 ```
 
-Be sure to remove the existing sample yml before pasting this yml.
+
 
 ![AWS Code](images/6-QuickStart.png)
 
@@ -90,10 +91,12 @@ Review the log
 
 ![AWS Code](images/9-QuickStart.png)
 
-Navigate to the Veracode platform to view the results
+Navigate to the Veracode platform to view the results.  This is a purposely built vulnerable app to demonstrate basic scanning.
 
 ![AWS Code](images/10-QuickStart.png)
 
 Consistency in scan results is what helps us to be successful in managing application security risk.  From here, we can clearly see when a new flaw is added.  Consult Veracode Support for more advice on architecting this into your pipeline workflow.
+
+### [Try a DAST scan](/QuickStart-DAST)
 
 ## [If you are looking to go further, see the AWS Veracode Advanced guide](/Advanced)
