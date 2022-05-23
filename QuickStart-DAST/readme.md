@@ -26,9 +26,12 @@ Navigate to Cloud9 and create your instance.
 
 ![AWS Code](images/1-QuickStartDAST.png)
 
+
 ![AWS Code](images/2-QuickStartDAST.png)
 
+
 ![AWS Code](images/3-QuickStartDAST.png)
+
 
 ![AWS Code](images/4-QuickStartDAST.png)
 
@@ -62,6 +65,7 @@ In the left under Security Groups, create a new group.
 
 ![AWS Code](images/7-QuickStartDAST.png)
 
+
 Allow port TCP port 8080 open for 34.195.146.191/32.  You might include your home or office IP address so you can perform basic accessibility checks.
 
 Note the Public IP address.  You can also run this command from the Cloud9 IDE terminal to get the public IP of your Cloud9 IDE.
@@ -76,7 +80,9 @@ Apply the security group to the Cloud9 IDE instance
 
 ![AWS Code](images/9-QuickStartDAST.png)
 
+
 ![AWS Code](images/10-QuickStartDAST.png)
+
 
 ![AWS Code](images/11-QuickStartDAST.png)
 
