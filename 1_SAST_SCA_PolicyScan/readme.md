@@ -28,7 +28,7 @@ Create Build Project
 
 ![AWS Code](images/1-QuickStart.png)
 
-Select No source (the below buildspec.yml will download the source code for us)
+Select No source (the below buildspec.yml will download the source code for us).
 
 ![AWS Code](images/2-QuickStart.png)
 
@@ -45,7 +45,7 @@ Click insert build commands and then switch to editor and enter the YAML below. 
 
 ![AWS Code](images/5-QuickStart.png)
 
-Be sure to remove the existing sample yml before pasting this yml. The sample buildspec.yml provided will automatically download the code, zip it, and scan it.  
+Be sure to remove the existing sample yml before pasting this yml. The sample buildspec.yml provided will automatically download the code, zip it, download the Veracode API wrapper, and submit for scanning.
 
 ```bash
 version: 0.2
