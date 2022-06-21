@@ -38,8 +38,8 @@ From there, you might leverage some of the options in this advanced approach.
 * Add a pass / fail check
 * Create VC SAST Pipeline build project 
 * Use a baseline file
-* Create VC SCA  build project for the app itself
-* Create VC SCA  build project for Docker Image
+* Create VC SCA build project for the app itself
+* Create VC SCA build project for Docker Image
 * Setup and run a DAST scan
 
 ## Steps

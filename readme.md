@@ -1,44 +1,45 @@
 # AWS CodeSuite and Veracode
 
-How to setup an AWS CodeBuild project with Veracode Static and SCA Analysis.
+How to setup an AWS CodeBuild project with Veracode Static, SCA, and Dynamic Analysis.
 
 ## Overview
-A complete guide on setting up an Amazon Web Services Demo Account that uses Veracode Services.
+Veracode integrates with products in the AWS CodeSuite such as CodeBuild and CodePipeline.
 
 For this demonstration we will use the PetStoreAPI written in Python.  
 
-If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Static / SCA Code build step.  If so [Proceed to Step  2](/2-SecretsSetup).
-
-This approach uses the Veracode API Wrapper Docker image for submitting the scan.  
-
-Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild and CodePipeline.
-
 ### AWS products we’ll use:
 
-* Cloud9 IDE (very fun and powerful IDE)
-* CodeCommit - this is where we’ll place the PetStoreAPI code.
 * CodeBuild - this is the primary area we integrate Veracode commands. 
-* CodePipeline - pull in the CodeBuild steps to the appropriate point in your CodePipeline.
+* Cloud9 IDE (very fun and powerful IDE) - we'll use this to run a Docker image for the DAST scan.
 
+### [SAST + SCA Steps ](1_SAST_SCA_PolicyScan)
+* Create CodeBuild project
+* Enter API keys in environment variables
+* Paste in provided buildspec and submit the scan
 
-### General Flow [QuickStart](QuickStart)
-* Create CodeCommit Repository 
-* Create CodeBuild project, ZIP artifact and scan
-
+### [DAST Steps ](2_DAST)
+* Use Cloud9 IDE to run the PetstoreAPI Docker Image
+* Allow Veracode IP address to access Cloud9 via security group
+* Submit the DAST scan
 
 ### General Flow [Advanced](Advanced)
-* Create CodeCommit Repository 
-* Create Cloud9 IDE environment
 * Create S3 bucket for artifact storage
-* Clone PetStoreAPI 
-* Push PetStoreAPI to AWS CodeCommit.
-* Create AWS CodeBuild project to build the app
-* Create VC API secrets and store in Secrets Manager
-* Create DockerHub account
-* Create VC SAST Policy build project 
-* Add a pass / fail check
-* Create VC SAST Pipeline build project 
-* Use a baseline file
-* Create VC SCA  build project for the app itself
-* Create VC SCA  build project for Docker Image
+* Create AWS CodeBuild project to submit the scan
+* Pull request or component scanning with the SAST Pipeline scanner
+* Create OSS Bill of Materials (SCA) for the Docker image itself
 * Setup and run a DAST scan
+* Using a Veracode Docker image
+
+### More information
+View more information in this four part video series using AWS Cloud9 IDE with Veracode services.
+
+https://www.youtube.com/watch?v=P6QDC94R_bU
+
+https://www.youtube.com/watch?v=oHw-qR9AEx8
+
+https://www.youtube.com/watch?v=GOLoShMMUBw
+
+https://www.youtube.com/watch?v=ndzAMaPQ_eE
+
+
+Use AWS Secrets to store and deliver your API keys
