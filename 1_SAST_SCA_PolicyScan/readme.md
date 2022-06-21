@@ -1,6 +1,6 @@
 # AWS CodeSuite and Veracode
 
-Setup an AWS CodeBuild project with Veracode Static, SCA Analysis, and Dynamic Analysis.
+Setup an AWS CodeBuild project with Veracode Static and Software Composition Analysis.
 
 ## Overview
 
@@ -19,6 +19,8 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * Generate Veracode API Keys in Veracode platform
 * Create CodeBuild Project in AWS
 * Use the below sample buildspec.yml to checkout code, artifact code, and scan artifact for security flaws.
+
+https://youtu.be/oNPZJwE6ZtQ
 
 Create Build Project
 
