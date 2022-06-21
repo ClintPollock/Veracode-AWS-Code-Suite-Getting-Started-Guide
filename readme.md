@@ -18,12 +18,12 @@ The basic flow we'll be demonstrating is Checkout - Artifact - Scan.
 
 ![AWS Code](images/CheckoutArtifactScan.png)
 
-### [Static and Software Composition Analysis Scanning ](1_SAST_SCA_PolicyScan)
+### [Static and Software Composition Analysis Scanning](1_SAST_SCA_PolicyScan)
 * Create CodeBuild project
 * Enter API keys in environment variables
 * Paste in provided buildspec and submit the scan
 
-### [Getting Started with Dynamic Scanning ](2_DAST)
+### [Dynamic Scanning](2_DAST)
 * Use Cloud9 IDE to run the PetstoreAPI Docker Image
 * Allow Veracode IP address to access Cloud9 via security group
 * Submit the DAST scan

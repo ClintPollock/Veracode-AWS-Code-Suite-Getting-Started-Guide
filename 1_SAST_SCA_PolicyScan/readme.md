@@ -1,10 +1,12 @@
 # AWS CodeSuite and Veracode
 
-How to setup an AWS CodeBuild project with Veracode Static, SCA Analysis, and Dynamic Analysis.
+Setup an AWS CodeBuild project with Veracode Static, SCA Analysis, and Dynamic Analysis.
 
 ## Overview
 
 For this demonstration we will use the PetStoreAPI written in Python.  
+
+https://github.com/veracode/petstore-api-flask
 
 General steps are checkout code, build code, then upload the artifact for scanning.  For Dynamic scanning, we'll run the app and scan it.
 
@@ -13,26 +15,10 @@ This approach uses the Veracode API Wrapper for submitting the scan.
 
 Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild and CodePipeline.
 
-Login to the Veracode platform and generate your API keys.
-
-### AWS products we’ll use:
-
-* CodeBuild - this is the primary area we integrate Veracode commands. 
-
-### Veracode products we'll use
-
-* Static, Software Composition Analysis, and Dynamic API scanning
-
 ### Steps
 * Generate Veracode API Keys in Veracode platform
 * Create CodeBuild Project in AWS
 * Use the below sample buildspec.yml to checkout code, artifact code, and scan artifact for security flaws.
-
-For the Quick Start we will use a simple Python app.
-
-You can download the source code from here if you like.  The sample buildspec.yml provided will automatically download the code, zip it, and scan it.  
-
-https://github.com/veracode/petstore-api-flask
 
 Create Build Project
 
@@ -55,7 +41,7 @@ Click insert build commands and then switch to editor and enter the YAML below. 
 
 ![AWS Code](images/5-QuickStart.png)
 
-Be sure to remove the existing sample yml before pasting this yml.
+Be sure to remove the existing sample yml before pasting this yml. The sample buildspec.yml provided will automatically download the code, zip it, and scan it.  
 
 ```bash
 version: 0.2
