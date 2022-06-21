@@ -1,33 +1,33 @@
 # AWS CodeSuite and Veracode
 
-How to setup an AWS CodeBuild project with Veracode Static and SCA Analysis.
+How to setup an AWS CodeBuild project with Veracode Static Pipline Scanner and Software Composition Analysis. 
 
 ## Overview
-A quick start guide
+A quick start guide to getting results directly into your console.
 
 For this demonstration we will use the PetStoreAPI written in Python.  
 
-If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Scan.
-This approach uses the Veracode API Wrapper for submitting the scan.  
+If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Scan. 
 
-Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild and CodePipeline.
+Double check the app is packaged properly.
+https://docs.veracode.com/r/compilation_packaging
+
+Veracode is generally used in AWSCodeBuild and AWSCodePipeline.
 
 ### AWS products we’ll use:
 
 * CodeCommit - this is where we’ll place the PetStoreAPI code.
 * CodeBuild - this is the primary area we integrate Veracode commands. 
 
+### Prerequisites
+* Veracode API Key and ID
+* Veracodoe SCA Agent API key and ID
+
 ### General Flow Basic
 * Create CodeCommit Repository 
-* Create build artificat to ZIP artifact and scan with Veracode Policy SAST+SCA
+* Create CodeBuild job
 
-Get started scanning with Veracode and AWS quickly using Static + SCA Policy scan. 
-
-Since flaws are generally not added on a day to day basis the only basic requirement is to have a SAST+SCA scan of the same artifact, built the same way, on a regular basis.  Some developers may shift left, but if you don’t add new flaws for 3 months in an app, you probably don’t need to scan every PR. Gathering data is critical so that we can make good decisions on where to focus efforts and balance the risk. 
-
-For the Quick Start we will use a simple Python app.
-
-Visit this link and download ZIP.
+### Uploaidng source to a new CodeCommit repo
 
 GitHub - veracode/petstore-api-flask: A vulnerable API based on the Swagger Petstore API, built in Flask. 
 
@@ -35,15 +35,38 @@ https://github.com/veracode/petstore-api-flask
 
 ![AWS Code](images/1-QuickStart.png)
 
-To get started with a Static Policy / SCA scan in AWS quickly, download the wrapper. Download the Dist.zip and extract the wrapper jar file from here -
+In AWS navigate to CodeCommit.  Create a new repo.  
+Create your first file called buildspec.yml, and past the below into it.  Then, choose the Upload File option and upload the petstore-api-flask-main.zip.
 
-Maven Central Repository Search - https://search.maven.org/search?q=a:vosp-api-wrappers-java
+```bash
+version: 0.2
 
-In AWS navigate to CodeCommit.  Create a new repo, and upload the petstore-api-flask-main.zip and VeracodeJavaAPI.jar.
-
-![AWS Code](images/2-QuickStart.png)
-
-![AWS Code](images/3-QuickStart.png)
+phases:
+  build:
+    # The LS commands simply allow you to see what is in the folder.  In the previous step we created the petstoreapi.zip.
+    # It was then downloaded locally based on the Source Configuration for this project to pull from the S3 bucket."
+    commands:
+      - ls -la
+      - ls /opt/veracode/
+      # Run Static Pipeline Scanner
+      - curl -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
+      - unzip pipeline-scan-LATEST.zip pipeline-scan.jar
+      - java -jar /opt/veracode/pipeline-scan.jar -vid $vid -vkey $vkey --file petstoreapi.zip
+      # Run SCA Scanner
+      - curl -sSL https://download.sourceclear.com/ci.sh | sh >> Veracode-SCA-Results-Build-ID-$CODEBUILD_BUILD_NUMBER-DATE-$(date +%Y-%m-%d).txt
+      - cat Veracode-SCA-Results-Build-ID-$CODEBUILD_BUILD_NUMBER-DATE-$(date +%Y-%m-%d).txt
+      - java -jar VeracodeJavaAPI.jar -vid $vid -vkey $vkey -appname AWSCodeBuild-PetStoreAPI -action UploadAndScan -createprofile true -version $CODEBUILD_BUILD_ID -filepath petstore.zip
+  post_build:
+    # Here we are preparing the results to be archived.
+    commands:
+      - cp results.json Veracode-SAST-Pipeline-Results-Build-ID-$CODEBUILD_BUILD_NUMBER-DATE-$(date +%Y-%m-%d).json
+      - zip results.zip results.json
+      - ls -la
+artifacts:
+  files:
+    - Veracode-SAST-Pipeline-Results-Build-ID-$CODEBUILD_BUILD_NUMBER-DATE-$(date +%Y-%m-%d).json
+    - Veracode-SCA-Results-Build-ID-$CODEBUILD_BUILD_NUMBER-DATE-$(date +%Y-%m-%d).txt
+```
 
 Create a Build Project
 
@@ -59,44 +82,13 @@ Expand the Additional Configuration section.  You can hard code the VID and VKEY
 
 ![AWS Code](images/5-QuickStart.png)
 
-Click insert build commands and then switch to editor, and enter the YAML below.
-
 ![AWS Code](images/6-QuickStart.png)
 
 ![AWS Code](images/7-QuickStart.png)
 
-Sample buildspec file for submitting a Static Policy Scan:
-
-```bash
-version: 0.2
-phases:
-  install:
-    commands:
-      # this command helps you see the files in the build server folder, helps you to troubleshoot.
-      - ls -la
-      # - command
-  build:
-    commands:
-      - unzip -o petstore-api-flask-main.zip
-      # this will prepare an optimized ZIP file for upload which contains only the files we need.
-      - zip petstore.zip petstore-api-flask-main/api.py petstore-api-flask-main/requirements.txt
-      # - command
-  #post_build:
-    #commands:
-      - java -jar VeracodeJavaAPI.jar -vid VIDHERE -vkey VKEYHERE -appname AWSCodeBuild-PetStoreAPI -action UploadAndScan -createprofile true -version $CODEBUILD_BUILD_ID -filepath petstore.zip
-#artifacts:
-  #files:
-    # - location
-    # - location
-```
-
 Start the build and it should complete successfully.
 
 ![AWS Code](images/8-QuickStart.png)
-
-Consistency is what helps us to be successful in managing application security risk.  Imagine yourself in the developers shoes and you are told to fix all these flaws, which no one budgeted for, and you did not create.  To have success, we must gain developer trust. For that to happen, we need consistent and accurate results.  For that to happen, we need to have the same artifact built the same way (at least for a Policy scan). 
-
-From here, we can clearly see when a new flaw is added.  Now this is a much smaller workload and will be more accurate (if build / packaging done correct per compilation guide).  If the scan is being done differently each time, then we should suggest Sandbox or Pipeline scan earlier in the build process.  At some point, when the entire app comes together, perhaps a single micro service, or a collection of, they need to be packaged consistently and scanned the same way for the Policy Scan.  This will begin to give our customers a clearer picture of what apps are failing and which are passing.
 
 ![AWS Code](images/9-QuickStart.png)
 
