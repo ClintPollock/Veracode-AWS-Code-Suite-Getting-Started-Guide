@@ -14,6 +14,8 @@ https://github.com/veracode/petstore-api-flask
 * Cloud9 IDE - we'll use this to run a Docker image for the DAST scan.
 * CodePipeline - integrate your security checks into your pipeline
 
+The basic flow is to Checkout - Artifact - Scan.
+
 ![AWS Code](images/CheckoutArtifactScan.png)
 
 ### [Getting Started with Static and Software Composition Analysis Scanning ](1_SAST_SCA_PolicyScan)
