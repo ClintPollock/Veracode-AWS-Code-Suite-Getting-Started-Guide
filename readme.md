@@ -16,7 +16,7 @@ https://github.com/veracode/petstore-api-flask
 
 The basic flow we'll be demonstrating is Checkout - Artifact - Scan.
 
-![AWS Code](images/CheckoutArtifactScan.png)
+![AWS Code](CheckoutArtifactScan.png)
 
 ### [Static and Software Composition Analysis Scanning](1_SAST_SCA_PolicyScan)
 * Create CodeBuild project
