@@ -1,11 +1,5 @@
 # SCA Advanced Scanning
 
-The SCA Agent scan does not have a docker image.  SCA Agent must be ran local to the source code folder and the build / package manager must be installed on the build image in use.
-
-SCA Agent scanning can be run in the same step which builds the app, since the source code and package manager are present.  I’d think we would want SCA to run as its own build project, and then be part of then CodePipeline, and the OS build image we use should be the same image they use to actually build the app, or a stripped down version of it.
-
-Create another CodeBuild project.
-
 ![AWS Code](images/1-SCA-Agent.png)
 
 In the case of SCA Agent we are going to download the source raw on an image with Python.  If this were Java with Maven, Maven would need to be installed on the image.
