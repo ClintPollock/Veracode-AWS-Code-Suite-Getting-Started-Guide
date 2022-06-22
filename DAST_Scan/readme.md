@@ -1,4 +1,4 @@
-# Dynamic Scanning API Endpoint
+# Dynamic Scanning
 
 How to run a Dynamic analysis against an API endpoint
 
@@ -118,4 +118,4 @@ Be sure to Link the scan to an application profile so you can have SAST + SCA + 
 
 DAST scanning can be done as often as you wish.  Start by setting up a recurring monthly scan and increase from there as needed.  You can also use our DAST API to submit scans from your pipeline.  See the docs.veracode.com for more information.
 
-## [Return Home](/)
+## [Return Home](https://github.com/ClintPollock/AWS-Code-Suite-Veracode-Examples/)
