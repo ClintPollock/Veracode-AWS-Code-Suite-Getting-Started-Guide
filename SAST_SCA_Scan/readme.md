@@ -22,7 +22,7 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 
 Video Overview:
 
-[<img alt="AWS and Veracode SAST and SCA" src="/DemoVideos/AWS_Veracode_SAST_SCA.png" />](https://ezwp.tv/V8ajQ9dl)
+[<img alt="AWS and Veracode SAST and SCA" src="/DemoVideos/AWS_Veracode_SAST_SCA.png" />](https://ezwp.tv/V8onPSNv)
 
 Create Build Project
 
@@ -93,3 +93,4 @@ Consistency in scan results is what helps us to be successful in managing applic
 ### Submit a Dynamic Runtime Test [Quickstart-DAST](DAST)
 
 ### If you are looking to go further, see the [AWS Veracode Advanced Guide](/Advanced)
+

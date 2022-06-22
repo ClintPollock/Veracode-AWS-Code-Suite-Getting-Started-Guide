@@ -1,3 +1,0 @@
-# DAST Scanning
-
-In progress

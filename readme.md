@@ -22,7 +22,7 @@ The basic flow we'll be demonstrating is Checkout - Artifact - Scan.
 * Create CodeBuild project
 * Enter API keys in environment variables
 * Paste in provided buildspec example to which will Checkout, Artifact, and Scan within a single buildspec file
-* Submit the SAST/SCA scan
+* Submit the build to get SAST/SCA scan results
 
 ### [Dynamic Scanning](QuickStart/DAST/)
 * Use Cloud9 IDE to run the PetstoreAPI Docker Image
