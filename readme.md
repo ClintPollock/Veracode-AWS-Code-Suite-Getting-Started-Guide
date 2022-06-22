@@ -29,9 +29,9 @@ The basic flow we'll be demonstrating is Checkout - Artifact - Scan.
 * Allow Veracode IP address to access Cloud9 via security group
 * Submit the DAST scan
 
-### [SCA Advanced Scanning](SCA_Advanced_Container_Scan/)
+### [SCA Advanced Scanning](SCA_Advanced_Scan/)
 * Vulnerable method detection
-* Container scanning
+* [Container scanning](SCA_Container_Scan/)
 * Create Open Source Software Bill of Materials (SCA) for the container image itself.
 
 ### [Break on a Pull Request](SAST_Pipeline_Scanner)
