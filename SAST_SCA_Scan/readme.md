@@ -22,7 +22,7 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 
 Video Overview:
 
-[<img alt="AWS and Veracode SAST and SCA" src="/DemoVideos/AWS_Veracode_SAST_SCA.png" />](https://ezwp.tv/V8onPSNv)
+[<img alt="AWS and Veracode SAST and SCA" src="/Demo_Videos/AWS_Veracode_SAST_SCA.png" />](https://ezwp.tv/V8onPSNv)
 
 Create Build Project
 

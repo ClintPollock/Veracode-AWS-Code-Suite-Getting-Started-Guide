@@ -18,21 +18,21 @@ The basic flow we'll be demonstrating is Checkout - Artifact - Scan.
 
 ![AWS Code](CheckoutArtifactScan.png)
 
-### [Static Analysis and Software Composition Analysis Scanning](QuickStart/SAST_SCA_PolicyScan/)
+### [Static Analysis and Software Composition Analysis Scanning](SAST_SCA_Scan/)
 * Create CodeBuild project
 * Enter API keys in environment variables
 * Paste in provided buildspec example to which will Checkout, Artifact, and Scan within a single buildspec file
 * Submit the build to get SAST/SCA scan results
 
-### [Dynamic Scanning](QuickStart/DAST/)
+### [Dynamic Scanning](DAST_Scan/)
 * Use Cloud9 IDE to run the PetstoreAPI Docker Image
 * Allow Veracode IP address to access Cloud9 via security group
 * Submit the DAST scan
 
-### [Advanced](/Advanced/)
-* Create S3 bucket for artifact storage
-* Create AWS CodeBuild project to submit the scan
-* Pull request or component scanning with the SAST Pipeline scanner
-* Create OSS Bill of Materials (SCA) for the Docker image itself
-* Setup and run a DAST scan
-* Using a Veracode Docker image
+### [SCA Advanced Scanning](SCA_Advanced_Container_Scan/)
+* Vulnerable method detection
+* Container scanning
+* Create Open Source Software Bill of Materials (SCA) for the container image itself.
+
+### [Break on a Pull Request](SAST_Pipeline_Scanner)
+* Use the Veracode Static Pipeline scanner for quick feedback on a pull or merge request.
