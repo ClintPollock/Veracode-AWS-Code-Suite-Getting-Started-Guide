@@ -1,4 +1,4 @@
-# QuickStart Dynamic API scan
+# Dynamic Scanning API Endpoint
 
 How to run a Dynamic analysis against an API endpoint
 
