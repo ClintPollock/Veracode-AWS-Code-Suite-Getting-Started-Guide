@@ -1,4 +1,4 @@
-# Veracode Static + Software Composition Analysis Scan
+# Veracode Static and Software Composition Analysis Scan
 
 Setup an AWS CodeBuild project with Veracode Static and Software Composition Analysis.
 
@@ -10,7 +10,7 @@ https://github.com/veracode/petstore-api-flask
 
 General steps are checkout code, build code, then upload the artifact for scanning.  For Dynamic scanning, we'll run the app and scan it.
 
-If you plan to use your own project, we simply need to have a ZIP file passed into the Veracode Scan.
+If you plan to use your own project, we simply need to have a build artifact or ZIP file passed into the Veracode Scan.
 This approach uses the Veracode API Wrapper for submitting the scan.  
 
 Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild and CodePipeline.
@@ -90,6 +90,6 @@ Consistency in scan results is what helps us to be successful in managing applic
 ![AWS Code](images/11-QuickStart.png)
 
 
-### Submit a Dynamic Runtime Test [Quickstart-DAST](/QuickStart-DAST)
+### Submit a Dynamic Runtime Test [Quickstart-DAST](DAST)
 
 ### If you are looking to go further, see the [AWS Veracode Advanced Guide](/Advanced)
