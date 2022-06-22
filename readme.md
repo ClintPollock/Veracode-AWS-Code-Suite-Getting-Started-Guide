@@ -1,6 +1,6 @@
 # AWS CodeSuite and Veracode
 
-How to setup an AWS CodeSuite with Veracode Static, Software Composition Analysis, and Dynamic Analysis.
+How to setup an AWS CodeSuite with Veracode Static Analysis, Software Composition Analysis, and Dynamic Analysis.
 
 ## Overview
 Veracode integrates with products in the AWS CodeSuite such as CodeBuild and CodePipeline.
