@@ -21,7 +21,8 @@ The basic flow we'll be demonstrating is Checkout - Artifact - Scan.
 ### [Static Analysis and Software Composition Analysis Scanning](QuickStart/SAST_SCA_PolicyScan/)
 * Create CodeBuild project
 * Enter API keys in environment variables
-* Paste in provided buildspec and submit the scan
+* Paste in provided buildspec example to which will Checkout, Artifact, and Scan within a single buildspec file
+* Submit the SAST/SCA scan
 
 ### [Dynamic Scanning](QuickStart/DAST/)
 * Use Cloud9 IDE to run the PetstoreAPI Docker Image
