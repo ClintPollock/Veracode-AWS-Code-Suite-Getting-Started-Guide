@@ -116,6 +116,6 @@ Be sure to Link the scan to an application profile so you can have SAST + SCA + 
 
 ![AWS Code](images/18-QuickStartDAST.png)
 
-DAST scanning can be done as often as you wish.  Start by setting up a recurring monthly scan and increase from there as needed.  You can also use our DAST API to submit scans from your pipeline.  See the Advanced section.
+DAST scanning can be done as often as you wish.  Start by setting up a recurring monthly scan and increase from there as needed.  You can also use our DAST API to submit scans from your pipeline.  See the docs.veracode.com for more information.
 
-## If you are looking to go further, see the [AWS Veracode Advanced Guide](/Advanced)
+## [Return Home](/)

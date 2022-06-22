@@ -90,4 +90,4 @@ Consistency in scan results is what helps us to be successful in managing applic
 ![AWS Code](images/11-QuickStart.png)
 
 
-### [Submit a Dynamic Runtime Test](DAST_Scan)
+### [Submit a Dynamic Runtime Test](/DAST_Scan/)
