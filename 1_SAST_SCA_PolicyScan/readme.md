@@ -91,6 +91,7 @@ Consistency in scan results is what helps us to be successful in managing applic
 
 ![AWS Code](images/11-QuickStart.png)
 
-### Try a DAST scan [Quickstart-DAST](/QuickStart-DAST)
 
-### If you are looking to go further, see the [AWS Veracode Advanced guide](/Advanced)
+### Submit a Dynamic Runtime Test [Quickstart-DAST](/QuickStart-DAST)
+
+### If you are looking to go further, see the [AWS Veracode Advanced Guide](/Advanced)
