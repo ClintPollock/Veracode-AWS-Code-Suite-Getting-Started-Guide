@@ -21,8 +21,8 @@ Veracode integrates with products in the AWS CodeSuite, specifically CodeBuild a
 * Use the below sample buildspec.yml to checkout code, artifact code, and scan artifact for security flaws.
 
 Video Overview:
-![Video Overview](videos/AWS_Veracode_SAST_SCA.png)
-[![Video Overview](videos/AWS_Veracode_SAST_SCA.png)](https://ezwp.tv/V8ajQ9dl)
+
+![[Video Overview](videos/AWS_Veracode_SAST_SCA.png)](https://ezwp.tv/V8ajQ9dl)
 
 Create Build Project
 
