@@ -1,4 +1,4 @@
-# AWS CodeBuild and Veracode Static + SCA Scan
+# Veracode Static + SCA Scan
 
 Setup an AWS CodeBuild project with Veracode Static and Software Composition Analysis.
 
@@ -87,7 +87,9 @@ Navigate to the Veracode platform to view the results.  This is a purposely buil
 
 ![AWS Code](images/10-QuickStart.png)
 
-Consistency in scan results is what helps us to be successful in managing application security risk.  From here, we can clearly see when a new flaw is added.  Consult Veracode Support for more advice on architecting this into your pipeline workflow.
+Consistency in scan results is what helps us to be successful in managing application security risk.  From here, we can clearly see when a new flaw is added. Consult Veracode Support for more advice on architecting this into your pipeline workflow.
+
+![AWS Code](images/11-QuickStart.png)
 
 ### Try a DAST scan [Quickstart-DAST](/QuickStart-DAST)
 
