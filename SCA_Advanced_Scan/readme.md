@@ -1,8 +1,13 @@
-# SCA Advanced Scanning
+# Software Composition Analysis Advanced Scanning
 
 ![AWS Code](images/1-SCA-Agent.png)
 
-In the case of SCA Agent we are going to download the source raw on an image with Python.  If this were Java with Maven, Maven would need to be installed on the image.
+SCA Advanced Scanning provides the following benefits:
+
+* Vulnerable Methods Detection 
+* Integrate directly into your pipeline
+* SCA Container scanning
+
 
 ![AWS Code](images/2-SCA-Agent.png)
 

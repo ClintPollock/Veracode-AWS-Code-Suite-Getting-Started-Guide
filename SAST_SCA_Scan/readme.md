@@ -91,3 +91,28 @@ Consistency in scan results is what helps us to be successful in managing applic
 
 
 ### [Submit a Dynamic Runtime Test](/DAST_Scan/)
+
+##Additional Buildspec Examples
+
+VeraDemo Java
+https://github.com/veracode/verademo
+
+
+```bash
+version: 0.2
+
+phases:
+  build:
+    commands:
+      # Checkout code
+      - git clone https://github.com/veracode/verademo
+      # Create an optimized ZIP file for scanning which contains only the files we need
+      - ls -la
+      - cd verademo/app
+      - mvn clean install
+  post_build:
+    # Download the Veracode API wrapper and submit the app for a Static Policy + SCA scan
+    commands:
+      - curl -O https://repo1.maven.org/maven2/com/veracode/vosp/api/wrappers/vosp-api-wrappers-java/22.5.10.0/vosp-api-wrappers-java-22.5.10.0.jar
+      - java -jar vosp-api-wrappers-java-22.5.10.0.jar -vid $VID -vkey $VKEY -appname AWSCodeBuild-VeraDemoJava -action UploadAndScan -createprofile true -criticality Medium -version $CODEBUILD_BUILD_ID -filepath target/verademo.war
+```
